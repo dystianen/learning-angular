@@ -1,0 +1,7 @@
+<div class="card" *ngIf="dataDetail">
+    <h2>{{dataDetail.title}}</h2>
+    <p>{{dataDetail.description}}</p>
+    <h5>{{dataDetail.price | currency}}</h5>
+    <button routerLink="/">Back</button>
+    <button>Checkout</button>
+</div>

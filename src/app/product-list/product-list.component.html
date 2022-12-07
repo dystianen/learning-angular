@@ -1,0 +1,23 @@
+<div class="section-title">
+    <h2 style="margin: 0">Products</h2>
+    <button routerLink="/products/add"> + Add</button>
+</div>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th style="width: 10rem">Action</th>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+        <td style="display: flex; gap: 5px">
+            <button [routerLink]="['/products', item.id]">detail</button>
+            <button>edit</button>
+            <button (click)="ngDelete(item.id)">delete</button>
+        </td>
+    </tr>
+</table>
